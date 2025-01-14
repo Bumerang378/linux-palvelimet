@@ -1,14 +1,14 @@
-# One hash makes heading one 
+# KIVA HEADING 
 
-Regular text is just written. 
+MUUTA TEKSTIÄ
 
-Empty line adds a paragraph break. 
+LISÄÄ MUUTA TEKSTIÄ
 
-## Two hashes make heading two
+## KAKSOIS HEADING
 
-URLs are rendered automatically, like http://TeroKarvinen.com
+URL ESIMERKKI http://TeroKarvinen.com
 
-Code is indented with four spaces (or a tab)
+KOODI ESIMERKKI 
 
     $ ls
-    hello-tero.md
+    hello-USER.md
