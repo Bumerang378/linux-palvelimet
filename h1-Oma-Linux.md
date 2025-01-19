@@ -26,7 +26,7 @@ Asensin Oracle VM VirtualBox -ohjelmaan Debian 12 -käyttöjärjestelmän (debia
    - Valitsin vaihtoehdon *Create a virtual hard disk now*, koska en ollut aiemmin käyttänyt Debian-pohjaista virtuaalikonetta.  
    - Tiedostotyypiksi valitsin VDI (Virtual Disk Image).  
    - Valitsin *Dynamically allocated*, jotta levytila laajenee tarpeen mukaan.  
-   - Määritin kiintolevyn koon 20GB ja tallensin tiedoston nimellä `Debian.vdi` HDD-kiintolevylleni.  
+   - Määritin kiintolevyn koon 20GB ja tallensin tiedoston nimellä `Debian.vdi` kiintolevylleni.  
 
 3. **Virtuaalikoneen käynnistäminen**:  
    - Valitsin käynnistyslevyksi ladatun `debian-12.9.0-amd64-netinst.iso`-tiedoston.  
@@ -57,8 +57,8 @@ Asensin Oracle VM VirtualBox -ohjelmaan Debian 12 -käyttöjärjestelmän (debia
    - Valitsin seuraavat paketit:  
      - Gnome (työpöytäympäristö)  
      - Debian desktop environment  
-     - Web server (opettaja mainitsi asiasta)  
-     - SSH server (opettaja mainitsi asiasta)  
+     - Web server (opettaja mainitsi asiasta tunnilla)  
+     - SSH server (opettaja mainitsi asiasta tunnilla)  
      - Standard system utilities  
 
 7. **Grub Boot Loader**:  
@@ -92,7 +92,7 @@ Asensin Oracle VM VirtualBox -ohjelmaan Debian 12 -käyttöjärjestelmän (debia
 
 ## Neljä GNU:n vapautta
 
-1. **Vapaus käyttää ohjelmistoa mihin tahansa tarkoitukseen (Freedom 0)**:  
+1. **Vapaus käyttää ohjelmistoa mihin vaan tarkoitukseen (Freedom 0)**:  
    Käyttäjä voi käyttää ohjelmistoa vapaasti mihin tahansa tarkoitukseen. Käyttäjä ei ole sidottu ohjelmiston käyttöön mihinkään erityiseen kontekstiin tai rajoitukseen.
 
 2. **Vapaus tutkia ohjelmiston sisäistä rakennetta ja muokata sitä (Freedom 1)**:  
@@ -112,7 +112,6 @@ Asensin Oracle VM VirtualBox -ohjelmaan Debian 12 -käyttöjärjestelmän (debia
 - [Neljä GNU:n vapautta: GNU Operating System](https://www.gnu.org/philosophy/free-sw.html)
 
 ## Vapaaehtoinen bonus: suosikkiohjelmani Linuxilla
-
-Yksi ensimmäisistä ohjelmista, jonka huomasin Debianilla, oli *2048*-peli, joka oli valmiiksi asennettuna ja löytyi nopeasti sovellusvalikosta. Pelissä tavoitteena on yhdistää samanlaisia numeroita, jotta pääsee korkeampiin arvoihin. Pelasin peliä noin 20 minuutin ajan täysin unohtaen kaiken muun ympäriltäni. Peli oli hauska ja koukuttava kokemus, joka toi mukanaan myös pienen tauon työskentelystä.  
+Yksi ensimmäisistä ohjelmista, jonka huomasin Debianilla, oli *2048*-peli*, joka oli valmiiksi asennettuna ja löytyi nopeasti sovellusvalikosta. Pelissä tavoitteena on yhdistää samanlaisia numeroita, jotta pääsee korkeampiin arvoihin. Pelasin peliä noin 20 minuutin ajan täysin unohtaen kaiken muun ympäriltäni. Peli oli hauska ja koukuttava.
   ![Image](https://github.com/user-attachments/assets/5358fc47-e658-40b6-9376-ec7891042e4d)
 
