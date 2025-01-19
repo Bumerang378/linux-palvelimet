@@ -90,7 +90,7 @@ Asensin Oracle VM VirtualBox -ohjelmaan Debian 12 -käyttöjärjestelmän (debia
 
 # Havainnot ja johtopäätökset
 
-- Debianin asentaminen Oracle VM VirtualBoxiin onnistui selkeiden vaiheiden avulla.
+- Debianin asentaminen Oracle VM VirtualBoxiin onnistui helposti ja ongelmatta.
 - LibreWolf-selaimen asennus oli suoraviivainen, ja ohjeet verkkosivustolla olivat hyödyllisiä.
 - Virtuaalikone toimi odotetusti, mutta suorituskyky oli hieman hidas, mikä on odotettavissa virtuaalikoneympäristössä.
 
