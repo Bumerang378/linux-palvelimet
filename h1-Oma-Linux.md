@@ -1,9 +1,9 @@
 $ Debianin asentaminen Oracle VM VirtualBoxiin ja LibreWolf-selaimen asentaminen
 
-# Tiivistelmä
+## Tiivistelmä
 Asensin Oracle VM VirtualBox -ohjelmaan Debian 12 -käyttöjärjestelmän (debian-12.9.0-amd64-netinst.iso). Järjestelmä asennettiin vaiheittain. Lopuksi asensin LibreWolf-selaimen terminaalin avulla. Raportissa kuvailen asennusprosessin yksityiskohtaisesti.
 
-# Ympäristön kuvaus
+## Ympäristön kuvaus
 
 - **Päivämäärä ja kellonaika:** 14.1.2025
 - **Laitteisto:**
@@ -16,9 +16,9 @@ Asensin Oracle VM VirtualBox -ohjelmaan Debian 12 -käyttöjärjestelmän (debia
   - **Kiintolevytila:** 20GB (dynaamisesti tilalla)
   - **Tiedostomuoto:** VDI (Virtual Disk Image)
 
-# Asennuksen vaiheet ja tulokset
+## Asennuksen vaiheet ja tulokset
 
-# Vaihe 1: Virtuaalikoneen luominen Oracle VM VirtualBoxissa
+### Vaihe 1: Virtuaalikoneen luominen Oracle VM VirtualBoxissa
 
 1. **Virtuaalikoneen luominen:**
    - Nimesin koneen (System name).
@@ -35,7 +35,7 @@ Asensin Oracle VM VirtualBox -ohjelmaan Debian 12 -käyttöjärjestelmän (debia
    - Valitsin käynnistyslevyksi ladatun debian-12.9.0-amd64-netinst.iso-tiedoston.
    - Valitsin asennustavaksi *Graphical Install*.
 
-# Vaihe 2: Debianin asennus
+### Vaihe 2: Debianin asennus
 
 1. **Käyttöjärjestelmän asetukset:**
    - Kieleksi valitsin englanti (English).
@@ -73,7 +73,7 @@ Asensin Oracle VM VirtualBox -ohjelmaan Debian 12 -käyttöjärjestelmän (debia
 
 *Kuva: Debianin järjestelmän versio*
 
-# Vaihe 3: LibreWolf-selaimen asentaminen
+### Vaihe 3: LibreWolf-selaimen asentaminen
 
 1. **LibreWolfin asennus terminaalissa:**
    - Käynnistin Firefox-selaimen ja avasin LibreWolfin asennusohjeet.
@@ -88,13 +88,13 @@ Asensin Oracle VM VirtualBox -ohjelmaan Debian 12 -käyttöjärjestelmän (debia
 2. **LibreWolfin toimivuus:**
    - Asennuksen jälkeen LibreWolf käynnistyi ilman ongelmia.
 
-# Havainnot ja johtopäätökset
+## Havainnot ja johtopäätökset
 
 - Debianin asentaminen Oracle VM VirtualBoxiin onnistui helposti ja ongelmatta.
 - LibreWolf-selaimen asennus oli suoraviivainen, ja ohjeet verkkosivustolla olivat hyödyllisiä.
 - Virtuaalikone toimi odotetusti, mutta suorituskyky oli hieman hidas, mikä on odotettavissa virtuaalikoneympäristössä.
 
-# Viittaukset / Lähteet
+## Viittaukset / Lähteet
 
 - [Debian: Debianin virallinen sivusto](https://www.debian.org)
 - [Oracle VM VirtualBox: VirtualBoxin virallinen sivusto](https://www.virtualbox.org)
