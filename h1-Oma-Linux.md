@@ -67,7 +67,7 @@ Asensin Oracle VM VirtualBox -ohjelmaan Debian 12 -käyttöjärjestelmän (debia
 8. **Asennuksen viimeistely**:  
    - Käynnistin järjestelmän uudelleen ja testasin sen toiminnan. Kaikki vaikutti toimivan moitteettomasti.  
    - Uudelleen käynnistin järjestelmän ja varmistin, että kaikki toimi.  
-   ![Image](https://github.com/user-attachments/assets/5358fc47-e658-40b6-9376-ec7891042e4d)
+ ![Image](https://github.com/user-attachments/assets/086d9f15-548a-438a-970d-d54efcdbb025)
 
 ### Vaihe 3: LibreWolf-selaimen asentaminen
 
@@ -114,4 +114,5 @@ Asensin Oracle VM VirtualBox -ohjelmaan Debian 12 -käyttöjärjestelmän (debia
 ## Vapaaehtoinen bonus: suosikkiohjelmani Linuxilla
 
 Yksi ensimmäisistä ohjelmista, jonka huomasin Debianilla, oli *2048*-peli, joka oli valmiiksi asennettuna ja löytyi nopeasti sovellusvalikosta. Pelissä tavoitteena on yhdistää samanlaisia numeroita, jotta pääsee korkeampiin arvoihin. Pelasin peliä noin 20 minuutin ajan täysin unohtaen kaiken muun ympäriltäni. Peli oli hauska ja koukuttava kokemus, joka toi mukanaan myös pienen tauon työskentelystä.  
-![Image](https://github.com/user-attachments/assets/086d9f15-548a-438a-970d-d54efcdbb025)
+  ![Image](https://github.com/user-attachments/assets/5358fc47-e658-40b6-9376-ec7891042e4d)
+
