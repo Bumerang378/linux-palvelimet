@@ -166,6 +166,90 @@ Tämä komento etsi "error"-ilmaisua järjestelmän lokitiedostosta /var/log/sys
 
 ---
 
-### e) Pidä huolta oman työn dokumentoinnista
+## e) Pipe (Putket)
 
-Kaikki vaiheeni ja komennot on dokumentoitu tarkasti yllä oleviin osioihin, ja olen lisännyt tarvittavat linkit lähteisiin.
+Suoritin seuraavan komennon:
+```bash
+ls -l | grep "\.txt"
+```
+- `ls -l` listaa kaikki tiedostot yksityiskohtaisesti.
+- `|` siirtää tuloksen seuraavalle komennolle.
+- `grep "\.txt"` suodattaa vain ne tiedostot, joiden nimi päättyy ".txt".
+
+![PICTURE 15.PNG](PICTURE%2015.PNG)
+
+## f) Rauta: Koneen tiedot
+
+### 1. Lshw-tiedot:
+Tarkistin, onko "lshw" asennettu komennolla:
+```bash
+which lshw
+```
+Vastaus oli `/usr/bin/lshw`, eli ohjelma on asennettu.
+
+![PICTURE 16.PNG](PICTURE%2016.PNG)
+
+### 2. Käyttö:
+Suoritin seuraavan komennon:
+```bash
+sudo lshw -short -sanitize
+```
+Komento antoi seuraavat tiedot: (Tässä vaiheessa listataan laitteistotiedot kuten prosessori, muisti ja levy).
+
+![PICTURE 17.PNG](PICTURE%2017.PNG)
+
+## g) Vapaaehtoinen: Lokeista valinta ja analyysi
+
+Suoritin seuraavan komennon:
+```bash
+sudo journalctl -f
+```
+
+![PICTURE 18.PNG](PICTURE%2018.PNG)
+
+### 1. root :TTY=pts/3 ; PWD=/home ; USER=root ; COMMAND=usr/bin/lshw -short -sanitize
+- **root**: Viittaa siihen, että tapahtuma on kirjattu pääkäyttäjän (root) toimesta tai pääkäyttäjän kontekstissa. [(Lähde)](https://wiki.debian.org/Root)
+- **TTY=pts/3**: TTY kertoo päätelaitteen, jota käytettiin. `pts/3` on pseudopääte, joka tyypillisesti viittaa etäyhteydellä (esim. SSH) käytettyyn terminaali-istuntoon. [(Lähde)](https://askubuntu.com/questions/66195/what-is-a-tty-and-how-do-i-access-a-tty)
+- **PWD=/home**: PWD (Print Working Directory) näyttää nykyisen työhakemiston, joka oli `/home` komennon suoritushetkellä. [(Lähde)](https://en.wikipedia.org/wiki/Pwd)
+- **USER=root**: Vahvistaa, että käyttäjä, joka komennon suoritti, oli root. [(Lähde)](https://wiki.debian.org/Root)
+- **COMMAND=/usr/bin/lshw -short -sanitize**: Suoritettu komento, joka näyttää tietoja järjestelmän laitteistosta. [(Lähde)](https://packages.debian.org/buster/lshw)
+
+Tulkinta: Pääkäyttäjä on suorittanut `lshw`-komennon etäyhteydellä käytetystä terminaali-istunnosta. Todennäköisesti hän on tarkastellut järjestelmän laitteistokokoonpanoa tiivistetyssä muodossa ja varmistanut, ettei arkaluonteisia tietoja paljasteta.
+
+### 2. packagekit.service: Consumed 1.882s CPU time.
+- **packagekit.service**: Viittaa PackageKit-palveluun, joka on ohjelmistopakettien hallintatyökalu. [(Lähde)](https://wiki.debian.org/PackageKit)
+- **Consumed 1.882s CPU time**: PackageKit-palvelu on käyttänyt prosessoriaikaa 1.882 sekuntia.
+
+![PICTURE 19.PNG](PICTURE%2019.PNG)
+
+## h) Vapaaehtoinen: Micro-editorin plugin
+
+Tässä tehtävässä asensin ja kokeilin `palletero`-nimistä pluginia micro-editorille. Seuraavassa on kuvattu prosessi vaihe vaiheelta:
+
+### 1. Pluginin asennus:
+- **Micro komento terminaalissa**: Avaa micro-editorin terminaalissa komennolla:
+  ```bash
+  micro
+  ```
+- **CTRL + E**: Avaa micro-editorin sisäisen komentotilan.
+- **Varmistus plugin-tuen olemassaolosta**: Komentorivillä tulisi näkyä teksti, joka ilmaisee, että plugin-tuki on ladattu (esim. `Plugin support enabled`).
+- **Pluginin asennus**:
+  ```bash
+  plugin install palletero
+  ```
+- **Tarkistus**:
+  ```bash
+  plugin list
+  ```
+
+![PICTURE 20.PNG](PICTURE%2020.PNG)
+
+### 2. Pluginin käyttö:
+- **Ctrl-SPACE micro-editorissa**: Paina `Ctrl-SPACE` näppäinyhdistelmää micro-editorissa. [(Lähde)](https://github.com/terokarvinen/palettero)
+- **Komentorivin sisältö**: Komentorivillä on noin 117 riviä erilaisia komentoja ja asetuksia.
+- **Väriteeman muokkaus**:
+  - **Skrollaamalla**: Komentorivin pohjalta löytyvät halutut väriasetukset.
+  - **Kirjoittamalla**: Komennon `colorscheme` avulla asetuksen voi hakea listan yläpäästä.
+- **Väriteeman valinta**: Kun oikea väriteema on kohdalla, valitaan se painamalla `Enter`. Valitsin väriteemaksi `sunny-day` talvisen harmauden kompensoimiseksi.
+
+![PICTURE 22.PNG](PICTURE%2022.PNG) ![PICTURE 23.PNG](PICTURE%2023.PNG)
