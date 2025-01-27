@@ -40,9 +40,7 @@ sudo apt-get update sudo apt-get install micro
 Tämä päivitti pakettilistan ja asensi micro-editorin. Asennus sujui ilman virheitä.
 
 2. **Micro-editorin käyttö**:  
-Avasin micro-editorin komennolla:
-
-micro
+Avasin micro-editorin komennolla:micro
 
 Kirjoitin editoriin tekstin "tämä on vain testi" ja toisen rivin "Testi?". Tämän jälkeen tallensin tiedoston ja suljin editorin.
 
@@ -62,9 +60,8 @@ Tämä komento asentaa kaikki kolme ohjelmaa kerralla.
 
 2. **Testaus**:
 - **Cowsay**: Suoritin seuraavan komennon:
-
   ```
-  cowsay testi
+  cowsay "Hei Tero ja tämän tehtävän tarkastaja :)"
   ```
 
   Komento tulosti tekstin "Hei Tero ja tämän tehtävän tarkastaja :)" lehmän puhekuplassa.
@@ -112,10 +109,10 @@ Aloitin hakemalla tiedostoa nimeltä 'Cat' ja 'Catman'. Käytin seuraavia koment
 Tämä komento näyttää tiedoston /bin/cat yksityiskohtaiset tiedot.
 
 ![Image](https://github.com/user-attachments/assets/59e45065-70a8-4565-9f85-fd0af38eb02b)
-file /bin/cat
+`file /bin/cat` 
 
 Komento selvittää, minkä tyyppinen tiedosto /bin/cat on.
-cat /etc/skibidi
+`cat /etc/skibidi` 
 
 ![Image](https://github.com/user-attachments/assets/63c9c101-e855-48c1-a62b-e65344310af4)
 
@@ -152,17 +149,13 @@ grep -r "bash" /etc
 
 Tämä komento etsi "bash"-ilmaisua kaikista tiedostoista /etc-hakemistossa ja sen alihakemistoissa.
 
-![Image](https://github.com/user-attachments/assets/444f6d3f-cec1-4648-82d2-ae58e7f907bc)
+![Image](https://github.com/user-attachments/assets/2f0b4dab-f42a-44e6-8458-fa5d427d5b90)
 
 2. **Esimerkki 2**:  
-Käytin komentoa:
-grep "error" /var/log/syslog
-
-Tämä komento etsi "error"-ilmaisua järjestelmän lokitiedostosta /var/log/syslog.
-
-![Image](https://github.com/user-attachments/assets/7b6cd78a-0b84-47da-92ba-8f1c73f0e11f)
-
-`grep` on erittäin tehokas työkalu tiedostojen sisällön hakemiseen. Sitä voi käyttää myös säännöllisten lausekkeiden kanssa.
+Suoritin seuraavan komennon:
+grep "root" /etc/passwd
+Tämä komento etsi "root"-käyttäjän tiedot /etc/passwd-tiedostosta.
+![Image](https://github.com/user-attachments/assets/e0ab4d2a-fa43-4578-ae1e-f30197134309)
 
 ---
 
@@ -176,7 +169,7 @@ ls -l | grep "\.txt"
 - `|` siirtää tuloksen seuraavalle komennolle.
 - `grep "\.txt"` suodattaa vain ne tiedostot, joiden nimi päättyy ".txt".
 
-![PICTURE 15.PNG](PICTURE%2015.PNG)
+![Image](https://github.com/user-attachments/assets/e0ab4d2a-fa43-4578-ae1e-f30197134309)
 
 ## f) Rauta: Koneen tiedot
 
@@ -187,7 +180,7 @@ which lshw
 ```
 Vastaus oli `/usr/bin/lshw`, eli ohjelma on asennettu.
 
-![PICTURE 16.PNG](PICTURE%2016.PNG)
+![Image](https://github.com/user-attachments/assets/3498e7d0-fd55-4064-8b63-12ce7b258528)
 
 ### 2. Käyttö:
 Suoritin seuraavan komennon:
@@ -196,7 +189,7 @@ sudo lshw -short -sanitize
 ```
 Komento antoi seuraavat tiedot: (Tässä vaiheessa listataan laitteistotiedot kuten prosessori, muisti ja levy).
 
-![PICTURE 17.PNG](PICTURE%2017.PNG)
+![Image](https://github.com/user-attachments/assets/302c757d-25e9-4481-a473-bf3c6e420b7b)
 
 ## g) Vapaaehtoinen: Lokeista valinta ja analyysi
 
@@ -205,14 +198,14 @@ Suoritin seuraavan komennon:
 sudo journalctl -f
 ```
 
-![PICTURE 18.PNG](PICTURE%2018.PNG)
+![Image](https://github.com/user-attachments/assets/e3aa6de4-1540-4a03-81dd-5974910e3a72)
 
 ### 1. root :TTY=pts/3 ; PWD=/home ; USER=root ; COMMAND=usr/bin/lshw -short -sanitize
 - **root**: Viittaa siihen, että tapahtuma on kirjattu pääkäyttäjän (root) toimesta tai pääkäyttäjän kontekstissa. [(Lähde)](https://wiki.debian.org/Root)
 - **TTY=pts/3**: TTY kertoo päätelaitteen, jota käytettiin. `pts/3` on pseudopääte, joka tyypillisesti viittaa etäyhteydellä (esim. SSH) käytettyyn terminaali-istuntoon. [(Lähde)](https://askubuntu.com/questions/66195/what-is-a-tty-and-how-do-i-access-a-tty)
 - **PWD=/home**: PWD (Print Working Directory) näyttää nykyisen työhakemiston, joka oli `/home` komennon suoritushetkellä. [(Lähde)](https://en.wikipedia.org/wiki/Pwd)
-- **USER=root**: Vahvistaa, että käyttäjä, joka komennon suoritti, oli root. [(Lähde)](https://wiki.debian.org/Root)
-- **COMMAND=/usr/bin/lshw -short -sanitize**: Suoritettu komento, joka näyttää tietoja järjestelmän laitteistosta. [(Lähde)](https://packages.debian.org/buster/lshw)
+- **USER=root**: Vahvistaa, että käyttäjä, eli root suoritti komennon. [(Lähde)](https://wiki.debian.org/Root)
+- **COMMAND=/usr/bin/lshw -short -sanitize**: Tämä on varsinainen suoritettu komento. lshw on työkalu, joka näyttää tietoja järjestelmän laitteistosta (https://packages.debian.org/buster/lshw). -short -optio pyytää lyhyempää tulostetta, ja -sanitize poistaa tulosteesta mahdollisesti arkaluonteisia tietoja. [(Lähde)](https://packages.debian.org/buster/lshw)
 
 Tulkinta: Pääkäyttäjä on suorittanut `lshw`-komennon etäyhteydellä käytetystä terminaali-istunnosta. Todennäköisesti hän on tarkastellut järjestelmän laitteistokokoonpanoa tiivistetyssä muodossa ja varmistanut, ettei arkaluonteisia tietoja paljasteta.
 
@@ -220,7 +213,7 @@ Tulkinta: Pääkäyttäjä on suorittanut `lshw`-komennon etäyhteydellä käyte
 - **packagekit.service**: Viittaa PackageKit-palveluun, joka on ohjelmistopakettien hallintatyökalu. [(Lähde)](https://wiki.debian.org/PackageKit)
 - **Consumed 1.882s CPU time**: PackageKit-palvelu on käyttänyt prosessoriaikaa 1.882 sekuntia.
 
-![PICTURE 19.PNG](PICTURE%2019.PNG)
+![Image](https://github.com/user-attachments/assets/ebcf9248-aefc-4801-b358-ed91a835d494)
 
 ## h) Vapaaehtoinen: Micro-editorin plugin
 
@@ -237,19 +230,20 @@ Tässä tehtävässä asensin ja kokeilin `palletero`-nimistä pluginia micro-ed
   ```bash
   plugin install palletero
   ```
-- **Tarkistus**:
+- **Tarkistus**: Tarkistin, että plugin on onnistuneesti ladattu komennolla plugin list 
   ```bash
   plugin list
   ```
+![Image](https://github.com/user-attachments/assets/9675f296-8964-432c-a086-14acdd81bcbb)
 
-![PICTURE 20.PNG](PICTURE%2020.PNG)
 
 ### 2. Pluginin käyttö:
 - **Ctrl-SPACE micro-editorissa**: Paina `Ctrl-SPACE` näppäinyhdistelmää micro-editorissa. [(Lähde)](https://github.com/terokarvinen/palettero)
 - **Komentorivin sisältö**: Komentorivillä on noin 117 riviä erilaisia komentoja ja asetuksia.
 - **Väriteeman muokkaus**:
-  - **Skrollaamalla**: Komentorivin pohjalta löytyvät halutut väriasetukset.
+  - **Skrollaamalla**: Komentorivin pohjalta löytyvät halutut väriasetukset, jonne voi skrollata, mutta suosittelen navigoida nuolinäppäimillä.
   - **Kirjoittamalla**: Komennon `colorscheme` avulla asetuksen voi hakea listan yläpäästä.
+![Image](https://github.com/user-attachments/assets/2965f33e-3f1a-4690-a4dc-d379657f03de)
 - **Väriteeman valinta**: Kun oikea väriteema on kohdalla, valitaan se painamalla `Enter`. Valitsin väriteemaksi `sunny-day` talvisen harmauden kompensoimiseksi.
 
-![PICTURE 22.PNG](PICTURE%2022.PNG) ![PICTURE 23.PNG](PICTURE%2023.PNG)
+![Image](https://github.com/user-attachments/assets/8165950a-6c27-4c4f-9cd2-4312ef48badc)
