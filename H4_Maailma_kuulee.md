@@ -12,21 +12,21 @@
   - **Tiedostomuoto**: VDI (Virtual Disk Image)  
 
 ### x)
-Artikkeli 1
-- Artikkeli käsittelee pilvipalvelimen määrittelyä ja sen asennusta.
-Se sisältää vaiheet pilvipalvelimen luomiseen, web-palvelimen asentamiseen ja palvelimen suojaamiseen.
+Artikkeli 1: 
+Tämä artikkeli käsittelee pilvipalvelimen määrittelyä ja asennusta. Se opastaa vaiheittain pilvipalvelimen luomisessa, web-palvelimen asentamisessa ja palvelimen suojaamisessa.
 
-Kysymyksiin vastaukset:
+- a) Pilvipalvelimen vuokraus ja asennus: Pilvipalvelimen voi hankkia useilta eri palveluntarjoajilta, kuten Amazon Web Services (AWS) tai Microsoft Azure. Asennusprosessi riippuu valitusta palvelusta.
+- d) Palvelimen suojaaminen palomuurilla: Palomuuri on olennainen työkalu palvelimen tietoturvan varmistamiseksi. Se voidaan asentaa joko suoraan palvelimelle tai erilliselle laitteelle.
+- e) Kotisivujen asentaminen palvelimelle: Palvelimelle voidaan asentaa kotisivut esimerkiksi Apache- tai Nginx-ohjelmistoilla.
+- f) Palvelimen ohjelmistopäivitykset: Palvelimen ohjelmistot on tärkeää pitää ajan tasalla, jotta tietoturva pysyy vahvana.
 
-- a) Pilvipalvelimen vuokraus ja asennus: Pilvipalvelimen voi vuokrata useista eri palveluista, kuten Amazon Web Services (AWS) tai Microsoft Azure. Asennusprosessi vaihtelee palveluntarjoajan mukaan.
-- d) Palvelin suojaan palomuurilla: Palomuuri on tärkeä työkalu palvelimen suojaamiseen hakkereilta. Se voidaan asentaa joko palvelimelle tai erilliseen laitteeseen.
-- e) Kotisivut palvelimelle: Kotisivut voidaan asentaa palvelimelle useilla eri ohjelmistoilla, kuten Apache tai Nginx.
-- f) Palvelimen ohjelmien päivitys: On tärkeää pitää palvelimen ohjelmat ajan tasalla suojaamiseksi tietoturvaongelmilta.
+Artikkeli 2: 
+Tämä artikkeli käsittelee virtuaalisen yksityisen palvelimen (VPS) määrittelyä ja käyttöönottoa. Se sisältää ohjeet seuraaviin vaiheisiin:
 
-Artikkeli 2
-
-- Artikkeli käsittelee virtuaalisen yksityisen palvelimen (VPS) määrittelyä ja asennusta.
-Se sisältää vaiheet VPS:n luomiseen, käyttäjän luomiseen ja suojaamiseen, ohjelmistojen päivittämiseen ja DNS-nimen lisäämiseen.
+- VPS-palvelimen luominen
+- Käyttäjätilin luominen ja suojaaminen
+- Ohjelmistojen päivittäminen
+- DNS-nimen lisääminen
 
 ## Virtuaalipalvelimen käyttöönotto ja konfigurointi [Kohdat a - c]
 ### a) Vuokraa oma virtuaalipalvelin
