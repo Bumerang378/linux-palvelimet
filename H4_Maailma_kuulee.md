@@ -10,25 +10,25 @@
   - **RAM**: 8GB  
   - **Kiintolevytila**: 20GB (dynaamisesti tilalla)  
   - **Tiedostomuoto**: VDI (Virtual Disk Image)  
-## Virtuaalipalvelimen käyttöönotto ja konfigurointi
+
 ### x)
-Tiivistelmä:
-Artikkeli käsittelee pilvipalvelimen määrittelyä ja sen asennuksesta.
+Artikkeli 1
+- Artikkeli käsittelee pilvipalvelimen määrittelyä ja sen asennusta.
 Se sisältää vaiheet pilvipalvelimen luomiseen, web-palvelimen asentamiseen ja palvelimen suojaamiseen.
 
-- a) Pilvipalvelimen vuokraus ja asennus:
-Pilvipalvelimen voi vuokrata useista eri palveluista, kuten Amazon Web Services (AWS) tai Microsoft Azure. Asennusprosessi vaihtelee palveluntarjoajan mukaan.
-- d) Palvelin suojaan palomuurilla:
-Palomuuri on tärkeä työkalu palvelimen suojaamiseen hakkereilta. Se voidaan asentaa joko palvelimelle tai erilliseen laitteeseen.
-- e) Kotisivut palvelimelle:
-Kotisivut voidaan asentaa palvelimelle useilla eri ohjelmistoilla, kuten Apache tai Nginx.
-- f) Palvelimen ohjelmien päivitys:
-On tärkeää pitää palvelimen ohjelmat ajan tasalla suojaamiseksi tietoturvaongelmilta.
+Kysymyksiin vastaukset:
 
-### Palvelimen ohjelmien päivitys
+- a) Pilvipalvelimen vuokraus ja asennus: Pilvipalvelimen voi vuokrata useista eri palveluista, kuten Amazon Web Services (AWS) tai Microsoft Azure. Asennusprosessi vaihtelee palveluntarjoajan mukaan.
+- d) Palvelin suojaan palomuurilla: Palomuuri on tärkeä työkalu palvelimen suojaamiseen hakkereilta. Se voidaan asentaa joko palvelimelle tai erilliseen laitteeseen.
+- e) Kotisivut palvelimelle: Kotisivut voidaan asentaa palvelimelle useilla eri ohjelmistoilla, kuten Apache tai Nginx.
+- f) Palvelimen ohjelmien päivitys: On tärkeää pitää palvelimen ohjelmat ajan tasalla suojaamiseksi tietoturvaongelmilta.
 
+Artikkeli 2
 
+- Artikkeli käsittelee virtuaalisen yksityisen palvelimen (VPS) määrittelyä ja asennusta.
+Se sisältää vaiheet VPS:n luomiseen, käyttäjän luomiseen ja suojaamiseen, ohjelmistojen päivittämiseen ja DNS-nimen lisäämiseen.
 
+## Virtuaalipalvelimen käyttöönotto ja konfigurointi [Kohdat a - c]
 ### a) Vuokraa oma virtuaalipalvelin
 Valitsin palvelimen sijainniksi Suomen, koska se helpottaa lainmukaisten vaatimusten täyttämistä ja tarjoaa paremman yhteysnopeuden käyttäjille.
 ![image](https://github.com/user-attachments/assets/77547f76-16c7-49bb-8f6b-9174946bbb3e)
@@ -69,7 +69,6 @@ ssh-keygen
 
 Prosessin aikana jätin salasanan tyhjäksi, sillä palvelimen oletussuojaukset ovat riittävät. Avaimen luonnin jälkeen siirryin `.ssh`-hakemistoon ja tarkistin julkisen avaimen:
 ![image](https://github.com/user-attachments/assets/152b494c-7c59-4e2f-9b60-0c5bbf7e7af0)
-
 ```
 cd .ssh
 cat id_rsa.pub
@@ -79,8 +78,9 @@ cat id_rsa.pub
 ```
 cat id_rsa.pub
 ```
-Kopioin tämän avaimen ja lisäsin sen UpCloudin SSH Key -asetuksiin. Tämän jälkeen palvelin käynnistettiin **Deploy**-napilla.
 ![image](https://github.com/user-attachments/assets/865c99c2-2c80-455b-b557-17f8982ce54c)
+Kopioin tämän avaimen ja lisäsin sen UpCloudin SSH Key -asetuksiin. Tämän jälkeen palvelin käynnistettiin **Deploy**-napilla.
+
 ![image](https://github.com/user-attachments/assets/72baa809-fc72-4f52-9cab-282076d19fba)
 ![image](https://github.com/user-attachments/assets/047b2dd1-c6ca-49b6-b058-7261cdb1c2a2)
 
@@ -89,7 +89,8 @@ Kun palvelin oli otettu käyttöön, yhdistyin siihen SSH:n avulla:
 ```
 ssh root@94.237.116.121
 ```
-![image](https://github.com/user-attachments/assets/1e930b9c-a89b-4cf7-8ff6-b0584607450b)
+![image](https://github.com/user-attachments/assets/095b496f-d7d8-4486-8ca7-0f414676fef0)
+
 
 Kirjoitin "yes", jotta yhteys muodostui ja tallennettiin tunnetuksi isännäksi.
 
@@ -176,10 +177,9 @@ Tarkistin sivun toiminnan avaamalla sen virtuaalikoneenselaimessa, sekä kokeile
 ![image](https://github.com/user-attachments/assets/90854b74-b77f-49aa-b097-2ed7c1cda7df)
 ![image](https://github.com/user-attachments/assets/935bc983-544e-45f1-8383-a0113dd33b46)
 
-### 2. Johtopäätökset
-Palvelimen asennus ja konfigurointi suoritettiin onnistuneesti. Turvallisuustoimenpiteet, kuten SSH-avaimen käyttö, root-tunnuksen sulkeminen ja palomuurin käyttöönotto, paransivat palvelimen tietoturvaa. Lisäksi Apache2-palvelin asennettiin onnistuneesti, ja verkkosivun näkyvyys testattiin eri laitteilla.
 
-###LÄHTEET
+
+### LÄHTEET
 https://terokarvinen.com/linux-palvelimet/#h4-maailma-kuulee
 https://susannalehto.fi/2022/teoriasta-kaytantoon-pilvipalvelimen-avulla-h4/
 https://terokarvinen.com/2017/first-steps-on-a-new-virtual-private-server-an-example-on-digitalocean/
