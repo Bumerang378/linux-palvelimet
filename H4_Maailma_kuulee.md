@@ -31,7 +31,7 @@ Se sisältää vaiheet VPS:n luomiseen, käyttäjän luomiseen ja suojaamiseen, 
 ## Virtuaalipalvelimen käyttöönotto ja konfigurointi [Kohdat a - c]
 ### a) Vuokraa oma virtuaalipalvelin
 Valitsin palvelimen sijainniksi Suomen, koska se helpottaa lainmukaisten vaatimusten täyttämistä ja tarjoaa paremman yhteysnopeuden käyttäjille.
-![image](https://github.com/user-attachments/assets/77547f76-16c7-49bb-8f6b-9174946bbb3e)
+- ![image](https://github.com/user-attachments/assets/77547f76-16c7-49bb-8f6b-9174946bbb3e)
 
 #### Palvelimen tekniset tiedot:
 - 1 ydin
