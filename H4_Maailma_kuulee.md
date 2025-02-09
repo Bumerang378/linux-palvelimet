@@ -180,6 +180,7 @@ Tarkistin sivun toiminnan avaamalla sen virtuaalikoneenselaimessa, sekä kokeile
 
 
 ### LÄHTEET
-https://terokarvinen.com/linux-palvelimet/#h4-maailma-kuulee
-https://susannalehto.fi/2022/teoriasta-kaytantoon-pilvipalvelimen-avulla-h4/
-https://terokarvinen.com/2017/first-steps-on-a-new-virtual-private-server-an-example-on-digitalocean/
+- https://terokarvinen.com/linux-palvelimet/#h4-maailma-kuulee
+- https://susannalehto.fi/2022/teoriasta-kaytantoon-pilvipalvelimen-avulla-h4/
+- https://terokarvinen.com/2017/first-steps-on-a-new-virtual-private-server-an-example-on-digitalocean/
+- https://upcloud.com/
